@@ -14,10 +14,7 @@ async function checkWeather(city){
     document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
     document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
     document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
-
-
 }
-
 searchBtn.addEventListener("click", ()=>{
     checkWeather(searchBox.value);
 })
@@ -30,22 +27,3 @@ searchBtn.addEventListener("click", ()=>{
 
 
 
-
-
-
-// JavaScript
-const card2 = document.querySelector('.card2');
-document.querySelector('button').addEventListener('click', function() {
-  card2.classList.add('rotate');
-  setTimeout(() => {
-    card2.classList.remove('rotate');
-  }, 1000);
-});
-
-// jQuery
-$('.search button').click(function() {
-  $('.card2').addClass('rotate');
-  setTimeout(() => {
-    $('.card2').removeClass('rotate');
-  }, 1000);
-});
